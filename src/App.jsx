@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Featured from './components/Featured';
+import PizzaList from './components/PizzaList';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       </head>
       <Featured/>
       <Footer/>
+      <PizzaList/>
     </div>
   );
 }
