@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <head>
       <title>My pizza app</title>
-      <meta name='description' content='best pizza iun the town' />
+      <meta name='description' content='best pizza in the town' />
       </head>
       <Featured/>
       <PizzaList/>
