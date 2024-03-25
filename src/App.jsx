@@ -1,20 +1,20 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import Featured from './components/Featured';
 import PizzaList from './components/PizzaList';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="container h-full w-full bg-red-600">
+    <div className="container h-full w-full bg-red-600 font-mono">
       <Navbar />
       <head>
       <title>My pizza app</title>
       <meta name='description' content='best pizza iun the town' />
       </head>
       <Featured/>
-      <Footer/>
       <PizzaList/>
+      <Footer/>
     </div>
   );
 }

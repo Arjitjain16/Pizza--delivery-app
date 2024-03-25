@@ -3,7 +3,7 @@ import React from 'react';
 function Navbar() {
   return (
     <>
-    <nav className='w-full h-1/6 flex items-center justify-between py-7 px-9 sticky top-0 text-slate-100'>
+    <nav className='w-full h-1/6 flex items-center justify-between py-7 px-9 sticky top-0 text-slate-100 bg-red-600'>
         <div className="contanct flex flex-row gap-4">
             <img src="/img/icons8-call-24.png" className='h-10 w-10' alt="" />
             <div className="cont">
