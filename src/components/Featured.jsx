@@ -4,9 +4,9 @@ import styles from '../components/style/Featured.module.css'; // Importing featu
 const Featured = () => {
     const [index, setIndex] = useState(0);
     const images = [
-        "public/img/10219.jpg",
         "/img/pngwing.com (9).png",
-        "/img/129390-ORVOR5-362.jpg",
+        "/img/get one free-img.png",
+        "/img/pngwing.com (8).png",
     ];
 
     const handleArrow = (direction) => {
@@ -26,7 +26,7 @@ const Featured = () => {
             <div className={styles.wrapper} style={{ transform: `translateX(${-100 * index}vw)` }}>
                 {images.map((img, i) => (
                     <div className={styles.imgContainer}  key={i}>
-                        <img src="/img/pngwing.com (9).png" alt="" className='object-cover  h-[100%] '   />
+                        <img src="/img/get one free-img.png" alt="" className='object-cover h-[90%] mt-[3%] ml-[5%] '/>
                     </div>
                 ))}
             </div>
