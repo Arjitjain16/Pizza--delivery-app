@@ -1,6 +1,10 @@
-import mongoose from 'mongoose'
-import dotenv from 'dotenv';
-dotenv.config();
+// import mongoose from 'mongoose'
+// import dotenv from 'dotenv';
+// dotenv.config();
+
+const mongoose = require('mongoose')
+const dotenv = require('dotenv');
+dotenv.config
 
 // const MONGO_URI = process.env.MONGO_URI
 
@@ -62,4 +66,7 @@ function dbConnect(){
 }
 dbConnect()
 
-export default dbConnect
+
+// export default dbConnect
+
+module.exports = dbConnect
