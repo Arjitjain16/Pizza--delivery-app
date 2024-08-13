@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import styles from '../components/style/Featured.module.css'; // Importing featured.module.css for CSS modules
 
 const Featured = () => {
     const [index, setIndex] = useState(0);
     const images = [
-        "/img/pngwing.com (9).png",
-        "/img/get one free-img.png",
-        "/img/pngwing.com (8).png",
+        "https://images.unsplash.com/photo-1604382355076-af4b0eb60143?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?q=80&w=1450&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ];
 
     const handleArrow = (direction) => {
@@ -19,19 +19,22 @@ const Featured = () => {
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.arrowContainer} style={{ left: 0 }} onClick={() => handleArrow("l")}>
-                <img src="/img/left arrow.png" alt="" className='h-[40px] ml-4' />
-            </div>
-            <div className={styles.wrapper} style={{ transform: `translateX(${-100 * index}vw)` }}>
-                {images.map((img, i) => (
-                    <div className={styles.imgContainer}  key={i}>
-                        <img src="/img/get one free-img.png" alt="" className='object-cover h-[90%] mt-[3%] ml-[5%] '/>
+        <div className='relative overflow-hidden' style={{ height: "calc(100vh - 100px)"}}>
+            <div className="flex h-20 rounded-full w-20 items-center absolute top-60 ml-9 cursor-pointer z-10" style={{ left: 0 }} onClick={() => handleArrow("l")}>
+                
+                <i className="text-[5vmax]   ml-4 ri-arrow-left-wide-line"></i>
+           </div>
+                <div className={styles.wrapper}>
+                    <div className='wrapper w-[300vw] h-full  flex items-center ' style={{ transform: `translateX(${-100 * index}vw)` }}>
+                        {images.map((img, idx) =>(
+                           <div key={idx} className='h-full w-[100vw]'>
+                            <img key={idx} src={img} alt="Featured" className='object-cover h-full w-full ' />
+                           </div>
+                        ))}
                     </div>
-                ))}
-            </div>
-            <div className={styles.arrowContainer} style={{ right: 0 }} onClick={() => handleArrow("r")}>
-                <img src="/img/right-arrow.png"  alt=""  className='h-[40px] mr-2' />
+                </div>
+            <div className="flex h-20 rounded-full w-20 items-center absolute top-60 mr-10 cursor-pointer" style={{ right: 0 }} onClick={() => handleArrow("r")}>
+            <i className=" text-[5vmax]  text-black ml-4 ri-arrow-right-wide-line"></i>
             </div>
         </div>
     );
