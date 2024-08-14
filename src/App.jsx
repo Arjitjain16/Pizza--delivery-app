@@ -3,6 +3,7 @@ import About from "./About";
 import Layout from "./components/Layout"; // assuming Layout is a custom component
 import Homepage from "./components/Homepage";
 import Featured from "./components/Featured"
+import PizzaList from './components/PizzaList'
 
 const App = () => {
   return (
@@ -12,7 +13,9 @@ const App = () => {
         <Route path="/about" element={<About />} />
       </Routes>
       <Featured/>
+      <PizzaList/>
     </Layout>
+
   );
 };
 

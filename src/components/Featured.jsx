@@ -25,7 +25,7 @@ const Featured = () => {
                 <i className="text-[5vmax]   ml-4 ri-arrow-left-wide-line"></i>
            </div>
                 <div className={styles.wrapper}>
-                    <div className='wrapper w-[300vw] h-full  flex items-center ' style={{ transform: `translateX(${-100 * index}vw)` }}>
+                    <div className='wrapper w-[300vw] h-full  flex items-center ' style={{ transform: `translateX(${-100 * index}vw)`, transition: `all 1.3s ease-in=out` }}>
                         {images.map((img, idx) =>(
                            <div key={idx} className='h-full w-[100vw]'>
                             <img key={idx} src={img} alt="Featured" className='object-cover h-full w-full ' />
